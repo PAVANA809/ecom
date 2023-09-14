@@ -13,7 +13,10 @@ function Header() {
 
       <View style={styles.search}>
         <FontAwesome name="search" size={30} color={Colors.darkgrey} />
-        <TextInput style={styles.input} value="Search" />
+        <TextInput style={styles.input}
+          placeholderTextColor={Colors.darkgrey}
+          placeholder="Search"
+        />
       </View>
       <TouchableOpacity>
         
@@ -42,7 +45,7 @@ const styles = StyleSheet.create({
     elevation: 10,
   },
   input: {
-    color: Colors.darkgrey,
+    color: Colors.black,
     width: "100%",
   },
 });

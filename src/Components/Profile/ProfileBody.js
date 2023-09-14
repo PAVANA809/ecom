@@ -1,17 +1,19 @@
 import React from "react";
-import { View, Text, StyleSheet, Dimensions } from "react-native";
+import { View, Text, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
+import Colors from "../../Shared/Colors";
 
 function ProfileBody() {
   return (
     <View style={styles.container}>
-      <Text>ProfileBody</Text>
+      <TouchableOpacity style={styles.orders}>
+        <Text>Your orders</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: "center",
     alignItems: "center",
     alignSelf: "center",
     backgroundColor: "white",
@@ -21,6 +23,16 @@ const styles = StyleSheet.create({
     marginTop: 8,
     elevation: 5,
   },
+  orders: {
+    backgroundColor: Colors.grey,
+    padding: 10,
+    width: Dimensions.get("window").width * 0.9,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 10,
+  }
+
 });
 
 export default ProfileBody;

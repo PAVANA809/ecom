@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Profile from './Profile';
+
 
 function Fav() {
   return (
     <View style={styles.container}>
-        <Profile/>
+        <Text>Fav</Text>
     </View>
   );
 }
