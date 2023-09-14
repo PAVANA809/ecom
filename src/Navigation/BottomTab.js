@@ -7,6 +7,7 @@ import Home from "../Screens/Home";
 import Fav from "../Screens/Fav";
 import Cart from "../Screens/Cart";
 import Profile from "../Screens/Profile";
+import DrawerNav from "./DrawerNav";
 
 
 const Tab = createBottomTabNavigator();
@@ -21,9 +22,10 @@ function BottomTab() {
           }}
         >
           <Tab.Screen
-            name="Home"
-            component={Home}
+            name="Drawer"
+            component={DrawerNav}
             options={{
+              title: "Home",
               tabBarIcon: ({ color, size }) => (
                 <FontAwesome name="home" size={size} color={color} />
               ),

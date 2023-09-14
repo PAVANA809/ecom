@@ -4,12 +4,12 @@ import Filter from '../Components/Home/Filter';
 import Header from '../Components/Home/Header';
 import ItemList from '../Components/Home/ItemList';
 
-function Home() {
+function Home({navigation}) {
   return (
     <View style={styles.container}>
-      <Header />
+      <Header navigation={navigation}/>
       <Filter />
-      <ItemList/>
+      <ItemList navigation={navigation}/>
     </View>
   );
 }

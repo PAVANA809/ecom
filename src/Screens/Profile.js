@@ -4,11 +4,11 @@ import ProfileBody from "../Components/Profile/ProfileBody";
 import ProfileFooter from "../Components/Profile/ProfileFooter";
 import ProfileHeadr from "../Components/Profile/ProfileHeadr";
 
-function Profile() {
+function Profile({ navigation}) {
   return (
     <View style={styles.container}>
       <ProfileHeadr />
-      <ProfileBody />
+      <ProfileBody navigation={ navigation} />
       <ProfileFooter />
     </View>
   );

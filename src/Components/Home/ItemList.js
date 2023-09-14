@@ -47,13 +47,13 @@ const Items = [
     },
 ]
 
-function ItemList() {
+function ItemList({navigation}) {
   return (
       <ScrollView style={styles.container}
         showsVerticalScrollIndicator={false}
       >
       {Items.map((item) => (
-        <Item item={item} key={item.id} />
+        <Item item={item} key={item.id} navigation={navigation} />
       ))}
     </ScrollView>
   );

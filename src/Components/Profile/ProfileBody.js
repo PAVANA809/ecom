@@ -2,10 +2,10 @@ import React from "react";
 import { View, Text, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
 import Colors from "../../Shared/Colors";
 
-function ProfileBody() {
+function ProfileBody({ navigation}) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.orders}>
+      <TouchableOpacity style={styles.orders} onPress={() => navigation.navigate("OrderList")}>
         <Text>Your orders</Text>
       </TouchableOpacity>
     </View>

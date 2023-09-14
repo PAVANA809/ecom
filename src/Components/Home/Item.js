@@ -1,9 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-function Item({ item}) {
+function Item({ item, navigation}) {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={() =>
+      navigation.navigate("ItemDetails", { item: item })
+    }>
       <Image source={item.image} style={styles.image} />
       <View style={styles.details}>
         <Text style={styles.name}>{item.name}</Text>

@@ -1,26 +1,34 @@
-import React from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
-import Colors from '../../Shared/Colors';
+import Colors from "../../Shared/Colors";
 
+import { DrawerActions } from "@react-navigation/native";
 
-function Header() {
+function Header({ navigation }) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
+      >
         <FontAwesome name="bars" size={40} color={Colors.darkgrey} />
       </TouchableOpacity>
 
       <View style={styles.search}>
         <FontAwesome name="search" size={30} color={Colors.darkgrey} />
-        <TextInput style={styles.input}
+        <TextInput
+          style={styles.input}
           placeholderTextColor={Colors.darkgrey}
           placeholder="Search"
         />
       </View>
-      <TouchableOpacity>
-        
-      </TouchableOpacity>
+      <TouchableOpacity></TouchableOpacity>
     </View>
   );
 }
@@ -39,14 +47,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: Colors.grey,
     height: 40,
-    width: "88%",
+    width: "85%",
     borderRadius: 50,
     paddingHorizontal: 10,
     elevation: 10,
+    overflow: "hidden",
   },
   input: {
     color: Colors.black,
-    width: "100%",
+    marginRight: 35,
   },
 });
 
