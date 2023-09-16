@@ -5,8 +5,17 @@ import Colors from "../../Shared/Colors";
 function ProfileBody({ navigation}) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.orders} onPress={() => navigation.navigate("OrderList")}>
+      <TouchableOpacity
+        style={styles.orders}
+        onPress={() => navigation.navigate("OrderList")}
+      >
         <Text>Your orders</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.adminbtn}
+        onPress={() => navigation.navigate("AdminPage")}
+      >
+        <Text>Admin access</Text>
       </TouchableOpacity>
     </View>
   );
@@ -31,8 +40,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 10,
-  }
-
+  },
+  adminbtn: {
+    backgroundColor: Colors.grey,
+    padding: 10,
+    width: Dimensions.get("window").width * 0.9,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 10,
+  },
 });
 
 export default ProfileBody;

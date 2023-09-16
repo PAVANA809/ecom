@@ -8,6 +8,7 @@ import Fav from "../Screens/Fav";
 import Cart from "../Screens/Cart";
 import Profile from "../Screens/Profile";
 import DrawerNav from "./DrawerNav";
+import ProfileNav from "./ProfileNav";
 
 
 const Tab = createBottomTabNavigator();
@@ -50,9 +51,10 @@ function BottomTab() {
             }}
           />
           <Tab.Screen
-            name="Profile"
-            component={Profile}
+            name="ProfileNav"
+            component={ProfileNav}
             options={{
+              title: "Profile",
               tabBarIcon: ({ color, size }) => (
                 <FontAwesome name="user" size={size} color={color}/>
               ),
